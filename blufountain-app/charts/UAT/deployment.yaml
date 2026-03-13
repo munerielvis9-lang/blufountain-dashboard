@@ -16,7 +16,7 @@ spec:
       containers:
       - name: blufountain-dashboard-container
         # ⚠️ CRITICAL: Ensure this image link is correct for your dashboard app!
-        image: kaributechsworkflow/blufountain-dashboard:latest
+        image: kaributechsworkflow/blufountain-bank-marketing-web:99a1e71659f37ddaca77f57ec8406ade43ff17d3
         ports:
         - containerPort: 80   # NGINX HTTP port
         - containerPort: 3000 # App HTTP port
