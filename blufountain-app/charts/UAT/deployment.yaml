@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: blufountain-dashboard-container
-        image: kaributechsworkflow/blufountain-bank-marketing-web:99a1e71659f37ddaca77f57ec8406ade43ff17d3
+        image: image: munerielvis/blufountain-dashboard:latest
         ports:
         - containerPort: 80   # NGINX HTTP port
         - containerPort: 3000 # App HTTP port
