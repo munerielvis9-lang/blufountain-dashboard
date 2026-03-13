@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blufountain-dashboard-deployment
+  namespace: blufountain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blufountain-dashboard
+  template:
+    metadata:
+      labels:
+        app: blufountain-dashboard
+    spec:
+      containers:
+      - name: blufountain-dashboard-container
+        # ⚠️ CRITICAL: Ensure this image link is correct for your dashboard app!
+        image: kaributechsworkflow/blufountain-dashboard:latest
+        ports:
+        - containerPort: 80   # NGINX HTTP port
+        - containerPort: 3000 # App HTTP port
+        - containerPort: 443  # NGINX HTTPS port
+        envFrom:
+        - configMapRef:
+            name: blufountain-dashboard-config
