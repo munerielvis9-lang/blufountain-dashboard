@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: blufountain-dashboard-container
-        image: munerielvis/blufountain-dashboard:v2
+        image: munerielvis/blufountain-dashboard:v3
         ports:
         - containerPort: 80   # NGINX HTTP port
         - containerPort: 3000 # App HTTP port
